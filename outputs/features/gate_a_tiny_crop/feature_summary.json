@@ -1,0 +1,14 @@
+{
+  "input_shape": [
+    64,
+    64
+  ],
+  "input_dtype": "uint8",
+  "gradient_min": 0.0,
+  "gradient_max": 2.1475093364715576,
+  "gradient_mean": 0.5232412815093994,
+  "local_std_min": 0.0,
+  "local_std_max": 0.3467682898044586,
+  "local_std_mean": 0.11914294958114624,
+  "method": "scrollguard.features.basic_image_features.v0"
+}
