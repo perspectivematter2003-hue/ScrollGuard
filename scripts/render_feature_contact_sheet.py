@@ -10,19 +10,18 @@ feature_dir = Path("data_cache/features/gate_a_tiny_crop")
 out_path = Path("outputs/features/gate_a_tiny_crop/contact_sheet.png")
 
 crop = np.load(crop_path)
-normalized = np.load(feature_dir / "normalized.npy")
-gradient = np.load(feature_dir / "gradient_magnitude.npy")
-local_std = np.load(feature_dir / "local_std.npy")
 
 items = [
     ("original_crop", crop),
-    ("normalized", normalized),
-    ("gradient_magnitude", gradient),
-    ("local_std", local_std),
+    ("normalized", np.load(feature_dir / "normalized.npy")),
+    ("gradient_magnitude", np.load(feature_dir / "gradient_magnitude.npy")),
+    ("local_std", np.load(feature_dir / "local_std.npy")),
+    ("texture_coherence", np.load(feature_dir / "texture_coherence.npy")),
+    ("texture_orientation", np.load(feature_dir / "texture_orientation.npy")),
 ]
 
-fig, axes = plt.subplots(1, 4, figsize=(10, 3))
-for ax, (title, img) in zip(axes, items):
+fig, axes = plt.subplots(2, 3, figsize=(9, 6))
+for ax, (title, img) in zip(axes.ravel(), items):
     ax.imshow(img, cmap="gray")
     ax.set_title(title)
     ax.axis("off")
@@ -32,5 +31,5 @@ plt.tight_layout()
 plt.savefig(out_path, dpi=200, bbox_inches="tight")
 plt.close()
 
-print("OK rendered feature contact sheet")
+print("OK rendered expanded feature contact sheet")
 print(f"output={out_path}")
