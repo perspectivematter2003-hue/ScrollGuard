@@ -1,0 +1,22 @@
+{
+  "scan_id": "Scroll1",
+  "z": 1000,
+  "y_range": [
+    3520,
+    3584
+  ],
+  "x_range": [
+    4256,
+    4320
+  ],
+  "shape": [
+    64,
+    64
+  ],
+  "dtype": "uint8",
+  "min_value": 0.0,
+  "max_value": 216.0,
+  "mean_value": 78.326171875,
+  "created_unix_time": 1781972525.1626375,
+  "method": "scrollguard.data_access.read_crop.v0"
+}
