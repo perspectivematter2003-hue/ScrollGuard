@@ -11,12 +11,15 @@ FIELDS = [
     "feature_dir",
     "preview_dir",
     "summary_file",
+    "texture_summary_file",
     "contact_sheet",
     "input_shape",
     "input_dtype",
     "gradient_mean",
     "local_std_mean",
-    "method",
+    "texture_coherence_mean",
+    "basic_method",
+    "texture_method",
 ]
 
 
@@ -31,10 +34,13 @@ def build_feature_record(
     source_metadata = Path(source_metadata)
     feature_dir = Path(feature_dir)
     preview_dir = Path(preview_dir)
+
     summary_file = preview_dir / "feature_summary.json"
+    texture_summary_file = preview_dir / "texture_feature_summary.json"
     contact_sheet = preview_dir / "contact_sheet.png"
 
     summary = json.loads(summary_file.read_text(encoding="utf-8"))
+    texture_summary = json.loads(texture_summary_file.read_text(encoding="utf-8"))
 
     return {
         "feature_set": feature_set,
@@ -43,12 +49,15 @@ def build_feature_record(
         "feature_dir": str(feature_dir),
         "preview_dir": str(preview_dir),
         "summary_file": str(summary_file),
+        "texture_summary_file": str(texture_summary_file),
         "contact_sheet": str(contact_sheet),
         "input_shape": summary["input_shape"],
         "input_dtype": summary["input_dtype"],
         "gradient_mean": summary["gradient_mean"],
         "local_std_mean": summary["local_std_mean"],
-        "method": summary["method"],
+        "texture_coherence_mean": texture_summary["coherence_mean"],
+        "basic_method": summary["method"],
+        "texture_method": texture_summary["method"],
     }
 
 
