@@ -1,0 +1,25 @@
+{
+  "feature_set": "gate_a_tiny_crop_quality_v0",
+  "input_shape": [
+    64,
+    64
+  ],
+  "quality_min": 0.3807142972946167,
+  "quality_max": 0.9664186239242554,
+  "quality_mean": 0.6975411176681519,
+  "risk_min": 0.03358137607574463,
+  "risk_max": 0.6192857027053833,
+  "risk_mean": 0.30245888233184814,
+  "method": "scrollguard.quality_scorer.score_surface_quality.v0",
+  "evidence_source": {
+    "source_crop_cache": "data_cache/crops/Scroll1_z1000_y3520_3584_x4256_4320.npy",
+    "source_metadata": "outputs/cached_tiny_crop_metadata.json",
+    "feature_dir": "data_cache/features/gate_a_tiny_crop",
+    "feature_index": "outputs/features/feature_index.csv",
+    "inputs": [
+      "gradient_magnitude.npy",
+      "local_std.npy",
+      "texture_coherence.npy"
+    ]
+  }
+}
