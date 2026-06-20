@@ -1,0 +1,13 @@
+{
+  "input_shape": [
+    64,
+    64
+  ],
+  "coherence_min": 0.0324140265583992,
+  "coherence_max": 0.9934315085411072,
+  "coherence_mean": 0.6717848181724548,
+  "orientation_min": -1.5706958770751953,
+  "orientation_max": 1.570391058921814,
+  "orientation_mean": -0.4253518879413605,
+  "method": "scrollguard.texture_features.structure_tensor_texture_features.v0"
+}
