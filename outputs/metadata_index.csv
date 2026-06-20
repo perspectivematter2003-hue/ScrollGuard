@@ -1,2 +1,3 @@
 scan_id,z,y_range,x_range,shape,dtype,min_value,max_value,mean_value,created_unix_time,method,source_file
+Scroll1,1000,"[3520, 3584]","[4256, 4320]","[64, 64]",uint8,0.0,216.0,78.326171875,1781972715.3139114,scrollguard.data_access.read_crop.v0,outputs/cached_tiny_crop_metadata.json
 Scroll1,1000,"[3520, 3584]","[4256, 4320]","[64, 64]",uint8,0.0,216.0,78.326171875,1781972525.1626375,scrollguard.data_access.read_crop.v0,outputs/gate_a_crop_metadata.json
