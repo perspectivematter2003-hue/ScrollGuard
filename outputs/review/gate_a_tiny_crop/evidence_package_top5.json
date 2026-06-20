@@ -1,0 +1,324 @@
+{
+  "package_name": "gate_a_tiny_crop_top5_review_evidence",
+  "doctrine": "AI proposes, verifier decides. Never hallucinate letters. Every output must have evidence trail back to CT data.",
+  "crop_metadata": {
+    "scan_id": "Scroll1",
+    "z": 1000,
+    "y_range": [
+      3520,
+      3584
+    ],
+    "x_range": [
+      4256,
+      4320
+    ],
+    "shape": [
+      64,
+      64
+    ],
+    "dtype": "uint8",
+    "min_value": 0.0,
+    "max_value": 216.0,
+    "mean_value": 78.326171875,
+    "created_unix_time": 1781972715.3139114,
+    "method": "scrollguard.data_access.read_crop.v0"
+  },
+  "evidence_count": 5,
+  "evidence_items": [
+    {
+      "review_id": "Scroll1_z1000_tile_0001",
+      "rank": 1,
+      "scan_id": "Scroll1",
+      "z": 1000,
+      "tile_coordinate": {
+        "tile_y0": 0,
+        "tile_y1": 16,
+        "tile_x0": 16,
+        "tile_x1": 32
+      },
+      "voxel_coordinate": {
+        "voxel_y0": 3520,
+        "voxel_y1": 3536,
+        "voxel_x0": 4272,
+        "voxel_x1": 4288
+      },
+      "ranking_values": {
+        "risk_mean": 0.3811179995536804,
+        "risk_max": 0.6192857027053833,
+        "quality_mean": 0.6188820004463196,
+        "quality_min": 0.3807142972946167
+      },
+      "feature_stats": {
+        "gradient_magnitude": {
+          "mean": 0.849617600440979,
+          "min": 0.0,
+          "max": 2.1475093364715576
+        },
+        "local_std": {
+          "mean": 0.20007118582725525,
+          "min": 0.06618829816579819,
+          "max": 0.3467682898044586
+        },
+        "texture_coherence": {
+          "mean": 0.7539802193641663,
+          "min": 0.10410631448030472,
+          "max": 0.9934315085411072
+        },
+        "quality_map": {
+          "mean": 0.6188820004463196,
+          "min": 0.3807142972946167,
+          "max": 0.8989313244819641
+        },
+        "risk_map": {
+          "mean": 0.3811179995536804,
+          "min": 0.10106867551803589,
+          "max": 0.6192857027053833
+        }
+      },
+      "source_files": {
+        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
+        "feature_dir": "data_cache/features/gate_a_tiny_crop",
+        "quality_dir": "data_cache/quality/gate_a_tiny_crop",
+        "overlay": "outputs/review/gate_a_tiny_crop/review_priority_overlay.png"
+      },
+      "method": "scrollguard.review_evidence_package.top_risk_tiles.v0"
+    },
+    {
+      "review_id": "Scroll1_z1000_tile_0002",
+      "rank": 2,
+      "scan_id": "Scroll1",
+      "z": 1000,
+      "tile_coordinate": {
+        "tile_y0": 16,
+        "tile_y1": 32,
+        "tile_x0": 16,
+        "tile_x1": 32
+      },
+      "voxel_coordinate": {
+        "voxel_y0": 3536,
+        "voxel_y1": 3552,
+        "voxel_x0": 4272,
+        "voxel_x1": 4288
+      },
+      "ranking_values": {
+        "risk_mean": 0.34701070189476013,
+        "risk_max": 0.53633052110672,
+        "quality_mean": 0.6529892683029175,
+        "quality_min": 0.46366947889328003
+      },
+      "feature_stats": {
+        "gradient_magnitude": {
+          "mean": 0.6250324249267578,
+          "min": 0.0,
+          "max": 1.4749858379364014
+        },
+        "local_std": {
+          "mean": 0.13857656717300415,
+          "min": 0.04531341418623924,
+          "max": 0.2749931216239929
+        },
+        "texture_coherence": {
+          "mean": 0.6369062662124634,
+          "min": 0.05473437160253525,
+          "max": 0.9543468952178955
+        },
+        "quality_map": {
+          "mean": 0.6529892683029175,
+          "min": 0.46366947889328003,
+          "max": 0.8960589170455933
+        },
+        "risk_map": {
+          "mean": 0.34701070189476013,
+          "min": 0.10394108295440674,
+          "max": 0.53633052110672
+        }
+      },
+      "source_files": {
+        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
+        "feature_dir": "data_cache/features/gate_a_tiny_crop",
+        "quality_dir": "data_cache/quality/gate_a_tiny_crop",
+        "overlay": "outputs/review/gate_a_tiny_crop/review_priority_overlay.png"
+      },
+      "method": "scrollguard.review_evidence_package.top_risk_tiles.v0"
+    },
+    {
+      "review_id": "Scroll1_z1000_tile_0003",
+      "rank": 3,
+      "scan_id": "Scroll1",
+      "z": 1000,
+      "tile_coordinate": {
+        "tile_y0": 0,
+        "tile_y1": 16,
+        "tile_x0": 32,
+        "tile_x1": 48
+      },
+      "voxel_coordinate": {
+        "voxel_y0": 3520,
+        "voxel_y1": 3536,
+        "voxel_x0": 4288,
+        "voxel_x1": 4304
+      },
+      "ranking_values": {
+        "risk_mean": 0.3452908992767334,
+        "risk_max": 0.5475670099258423,
+        "quality_mean": 0.6547091007232666,
+        "quality_min": 0.4524330198764801
+      },
+      "feature_stats": {
+        "gradient_magnitude": {
+          "mean": 0.5258780717849731,
+          "min": 0.0,
+          "max": 1.3353893756866455
+        },
+        "local_std": {
+          "mean": 0.12305781245231628,
+          "min": 0.028979811817407608,
+          "max": 0.2534165680408478
+        },
+        "texture_coherence": {
+          "mean": 0.5728352069854736,
+          "min": 0.07187818735837936,
+          "max": 0.9149622321128845
+        },
+        "quality_map": {
+          "mean": 0.6547091007232666,
+          "min": 0.4524330198764801,
+          "max": 0.8621594309806824
+        },
+        "risk_map": {
+          "mean": 0.3452908992767334,
+          "min": 0.13784056901931763,
+          "max": 0.5475670099258423
+        }
+      },
+      "source_files": {
+        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
+        "feature_dir": "data_cache/features/gate_a_tiny_crop",
+        "quality_dir": "data_cache/quality/gate_a_tiny_crop",
+        "overlay": "outputs/review/gate_a_tiny_crop/review_priority_overlay.png"
+      },
+      "method": "scrollguard.review_evidence_package.top_risk_tiles.v0"
+    },
+    {
+      "review_id": "Scroll1_z1000_tile_0004",
+      "rank": 4,
+      "scan_id": "Scroll1",
+      "z": 1000,
+      "tile_coordinate": {
+        "tile_y0": 16,
+        "tile_y1": 32,
+        "tile_x0": 32,
+        "tile_x1": 48
+      },
+      "voxel_coordinate": {
+        "voxel_y0": 3536,
+        "voxel_y1": 3552,
+        "voxel_x0": 4288,
+        "voxel_x1": 4304
+      },
+      "ranking_values": {
+        "risk_mean": 0.3325774073600769,
+        "risk_max": 0.5384430885314941,
+        "quality_mean": 0.6674225926399231,
+        "quality_min": 0.46155688166618347
+      },
+      "feature_stats": {
+        "gradient_magnitude": {
+          "mean": 0.4919207692146301,
+          "min": 0.0,
+          "max": 1.1282627582550049
+        },
+        "local_std": {
+          "mean": 0.10615981370210648,
+          "min": 0.040732257068157196,
+          "max": 0.17948085069656372
+        },
+        "texture_coherence": {
+          "mean": 0.5603266954421997,
+          "min": 0.04949041083455086,
+          "max": 0.9309725165367126
+        },
+        "quality_map": {
+          "mean": 0.6674225926399231,
+          "min": 0.46155688166618347,
+          "max": 0.8342302441596985
+        },
+        "risk_map": {
+          "mean": 0.3325774073600769,
+          "min": 0.1657697558403015,
+          "max": 0.5384430885314941
+        }
+      },
+      "source_files": {
+        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
+        "feature_dir": "data_cache/features/gate_a_tiny_crop",
+        "quality_dir": "data_cache/quality/gate_a_tiny_crop",
+        "overlay": "outputs/review/gate_a_tiny_crop/review_priority_overlay.png"
+      },
+      "method": "scrollguard.review_evidence_package.top_risk_tiles.v0"
+    },
+    {
+      "review_id": "Scroll1_z1000_tile_0005",
+      "rank": 5,
+      "scan_id": "Scroll1",
+      "z": 1000,
+      "tile_coordinate": {
+        "tile_y0": 32,
+        "tile_y1": 48,
+        "tile_x0": 48,
+        "tile_x1": 64
+      },
+      "voxel_coordinate": {
+        "voxel_y0": 3552,
+        "voxel_y1": 3568,
+        "voxel_x0": 4304,
+        "voxel_x1": 4320
+      },
+      "ranking_values": {
+        "risk_mean": 0.3309711813926697,
+        "risk_max": 0.5873632431030273,
+        "quality_mean": 0.6690287590026855,
+        "quality_min": 0.41263678669929504
+      },
+      "feature_stats": {
+        "gradient_magnitude": {
+          "mean": 0.5889673233032227,
+          "min": 0.0,
+          "max": 1.5625942945480347
+        },
+        "local_std": {
+          "mean": 0.13083241879940033,
+          "min": 0.04451199993491173,
+          "max": 0.25407397747039795
+        },
+        "texture_coherence": {
+          "mean": 0.6483526229858398,
+          "min": 0.05761405825614929,
+          "max": 0.9656857848167419
+        },
+        "quality_map": {
+          "mean": 0.6690287590026855,
+          "min": 0.41263678669929504,
+          "max": 0.9151573777198792
+        },
+        "risk_map": {
+          "mean": 0.3309711813926697,
+          "min": 0.08484262228012085,
+          "max": 0.5873632431030273
+        }
+      },
+      "source_files": {
+        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
+        "feature_dir": "data_cache/features/gate_a_tiny_crop",
+        "quality_dir": "data_cache/quality/gate_a_tiny_crop",
+        "overlay": "outputs/review/gate_a_tiny_crop/review_priority_overlay.png"
+      },
+      "method": "scrollguard.review_evidence_package.top_risk_tiles.v0"
+    }
+  ]
+}
