@@ -53,6 +53,14 @@ review_rows = read_csv(p("outputs/review/gate_a_tiny_crop/review_priority.csv"))
 st.subheader("Review Priority Ranking")
 st.dataframe(review_rows, width="stretch")
 
+review_tags_path = p("outputs/review/gate_a_tiny_crop/review_tags.csv")
+if review_tags_path.exists():
+    st.subheader("Human Review Tags")
+    review_tags = read_csv(review_tags_path)
+    st.dataframe(review_tags, width="stretch")
+else:
+    st.warning("Review tags file not found.")
+
 st.header("Top-5 Evidence Package")
 evidence = read_json(p("outputs/review/gate_a_tiny_crop/evidence_package_top5.json"))
 
