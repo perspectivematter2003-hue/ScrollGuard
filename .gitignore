@@ -5,3 +5,6 @@ __pycache__/
 data_cache/
 outputs/*.npy
 outputs/*.zarr
+
+# Demo package archives
+outputs/demo_package/*.zip
