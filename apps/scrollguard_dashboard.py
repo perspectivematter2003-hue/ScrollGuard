@@ -37,21 +37,21 @@ st.image(str(p("outputs/features/gate_a_tiny_crop/contact_sheet.png")))
 
 feature_index = read_csv(p("outputs/features/feature_index.csv"))
 st.subheader("Feature Index")
-st.dataframe(feature_index, use_container_width=True)
+st.dataframe(feature_index, width="stretch")
 
 st.header("Month 4 Quality / Risk Review")
 st.image(str(p("outputs/quality/gate_a_tiny_crop/quality_contact_sheet.png")))
 
 quality_index = read_csv(p("outputs/quality/quality_index.csv"))
 st.subheader("Quality Index")
-st.dataframe(quality_index, use_container_width=True)
+st.dataframe(quality_index, width="stretch")
 
 st.header("Review-Priority Tiles")
 st.image(str(p("outputs/review/gate_a_tiny_crop/review_priority_overlay.png")))
 
 review_rows = read_csv(p("outputs/review/gate_a_tiny_crop/review_priority.csv"))
 st.subheader("Review Priority Ranking")
-st.dataframe(review_rows, use_container_width=True)
+st.dataframe(review_rows, width="stretch")
 
 st.header("Top-5 Evidence Package")
 evidence = read_json(p("outputs/review/gate_a_tiny_crop/evidence_package_top5.json"))
