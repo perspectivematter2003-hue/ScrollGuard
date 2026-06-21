@@ -76,3 +76,7 @@ This is a tiny-crop prototype. It proves the ScrollGuard workflow locally, but i
 - More robust quality scoring
 - Reviewer feedback loop
 - Progress-prize demo package
+## Demo package documentation
+
+See `docs/demo_package_v0.md` for the v0 demo ZIP purpose, build commands, and artifact rules.
+
