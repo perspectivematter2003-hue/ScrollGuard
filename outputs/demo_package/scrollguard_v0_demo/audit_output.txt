@@ -1,0 +1,40 @@
+ScrollGuard daily start check
+user=siri
+cwd=/home/siri/ScrollGuard
+WARNING: Git has uncommitted changes:
+?? outputs/demo_package/
+?? scripts/build_demo_package.py
+
+OK ready for ScrollGuard work
+Next: continue Month 2 or run: python scripts/month2_smoke_test.py
+OK Month 2 smoke test passed
+crop_shape=(64, 64)
+crop_dtype=uint8
+metadata_scan_id=Scroll1
+No Vesuvius server access used in this test.
+OK Month 3 smoke test passed
+feature_shape=(64, 64)
+basic_method=scrollguard.features.basic_image_features.v0
+texture_method=scrollguard.texture_features.structure_tensor_texture_features.v0
+gradient_mean=0.5232412815093994
+local_std_mean=0.11914294958114624
+coherence_mean=0.6717848181724548
+No Vesuvius server access used in this test.
+OK Month 4 smoke test passed
+quality_shape=(64, 64)
+quality_mean=0.6975411176681519
+risk_mean=0.30245888233184814
+method=scrollguard.quality_scorer.score_surface_quality.v0
+No Vesuvius server access used in this test.
+OK review evidence smoke test passed
+evidence_count=5
+review_tiles=16
+No Vesuvius server access used in this test.
+OK review tags smoke test passed
+review_tag_rows=16
+No Vesuvius server access used in this test.
+OK dashboard smoke test passed
+Dashboard v0 files exist.
+No Vesuvius server access used in this test.
+OK full ScrollGuard local audit passed
+No Vesuvius server access used.

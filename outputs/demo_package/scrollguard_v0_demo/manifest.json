@@ -1,0 +1,24 @@
+{
+  "package_name": "scrollguard_v0_demo",
+  "created_unix_time": 1782053923.4536636,
+  "doctrine": "AI proposes, verifier decides. Never hallucinate letters. Every output must have an evidence trail back to CT data.",
+  "local_audit": "passed",
+  "vesuvius_server_access": "not used during package build except prior cached Gate A crop",
+  "copied_files": [
+    "README.md",
+    "docs/project_status.md",
+    "docs/dashboard_v0.md",
+    "outputs/hello_scroll.png",
+    "outputs/cached_tiny_crop_preview.png",
+    "outputs/metadata_index.csv",
+    "outputs/features/feature_index.csv",
+    "outputs/features/gate_a_tiny_crop/contact_sheet.png",
+    "outputs/quality/quality_index.csv",
+    "outputs/quality/gate_a_tiny_crop/quality_contact_sheet.png",
+    "outputs/review/gate_a_tiny_crop/review_priority.csv",
+    "outputs/review/gate_a_tiny_crop/review_priority_overlay.png",
+    "outputs/review/gate_a_tiny_crop/evidence_package_top5.json",
+    "outputs/review/gate_a_tiny_crop/evidence_report.md",
+    "outputs/review/gate_a_tiny_crop/review_tags.csv"
+  ]
+}
