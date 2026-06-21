@@ -9,6 +9,8 @@ python scripts/review_evidence_smoke_test.py
 python scripts/review_tags_smoke_test.py
 python scripts/dashboard_smoke_test.py
 python scripts/demo_package_smoke_test.py
+python scripts/build_demo_zip.py
+python scripts/demo_zip_smoke_test.py
 
 echo "OK full ScrollGuard local audit passed"
 echo "No Vesuvius server access used."
