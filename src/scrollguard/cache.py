@@ -12,6 +12,19 @@ def crop_cache_name(request: CropRequest) -> str:
     )
 
 
+def load_crop_cache_only(request: CropRequest, cache_dir: str | Path = "data_cache/crops") -> np.ndarray:
+    cache_dir = Path(cache_dir)
+    cache_path = cache_dir / crop_cache_name(request)
+
+    if not cache_path.exists():
+        raise FileNotFoundError(
+            f"Missing cached crop: {cache_path}. Cache-only mode refuses Vesuvius server access."
+        )
+
+    print(f"OK loaded cached crop only: {cache_path}")
+    return np.load(cache_path)
+
+
 def load_or_create_crop_cache(request: CropRequest, cache_dir: str | Path = "data_cache/crops") -> np.ndarray:
     cache_dir = Path(cache_dir)
     cache_dir.mkdir(parents=True, exist_ok=True)

@@ -1,8 +1,12 @@
 import json
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
 from scrollguard.data_access import CropRequest, build_metadata, save_metadata
-from scrollguard.cache import load_or_create_crop_cache
+from scrollguard.cache import load_crop_cache_only
 from scrollguard.metadata_index import load_metadata_files, write_csv, write_jsonl
 
 manifest_path = Path("configs/crops_manifest.json")
@@ -19,7 +23,7 @@ for item in items:
         x1=item["x1"],
     )
 
-    crop = load_or_create_crop_cache(request)
+    crop = load_crop_cache_only(request)
     metadata = build_metadata(request, crop)
     out_path = Path("outputs") / f"{name}_metadata.json"
     save_metadata(metadata, out_path)
