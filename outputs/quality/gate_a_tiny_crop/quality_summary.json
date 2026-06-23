@@ -13,7 +13,7 @@
   "method": "scrollguard.quality_scorer.score_surface_quality.v0",
   "evidence_source": {
     "source_crop_cache": "data_cache/crops/Scroll1_z1000_y3520_3584_x4256_4320.npy",
-    "source_metadata": "outputs/cached_tiny_crop_metadata.json",
+    "source_metadata": "outputs/gate_a_tiny_crop_metadata.json",
     "feature_dir": "data_cache/features/gate_a_tiny_crop",
     "feature_index": "outputs/features/feature_index.csv",
     "inputs": [

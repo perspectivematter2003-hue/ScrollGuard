@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -5,9 +7,17 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-crop_path = Path("data_cache/crops/Scroll1_z1000_y3520_3584_x4256_4320.npy")
-quality_dir = Path("data_cache/quality/gate_a_tiny_crop")
-out_path = Path("outputs/quality/gate_a_tiny_crop/quality_contact_sheet.png")
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from scrollguard.crop_manifest import get_manifest_item
+
+
+item = get_manifest_item("gate_a_tiny_crop")
+
+crop_path = item.crop_cache_path
+quality_dir = item.quality_cache_dir
+out_path = item.quality_output_dir / "quality_contact_sheet.png"
 
 items = [
     ("original_crop", np.load(crop_path)),
@@ -30,4 +40,6 @@ plt.savefig(out_path, dpi=200, bbox_inches="tight")
 plt.close()
 
 print("OK rendered quality contact sheet")
+print(f"crop_name={item.name}")
 print(f"output={out_path}")
+print("No Vesuvius server access used.")

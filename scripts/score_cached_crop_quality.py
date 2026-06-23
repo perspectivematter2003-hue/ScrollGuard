@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -5,17 +7,24 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from scrollguard.crop_manifest import get_manifest_item
 from scrollguard.quality_scorer import (
     score_surface_quality,
     summarize_quality,
     save_quality_summary,
 )
 
-feature_set = "gate_a_tiny_crop_quality_v0"
 
-feature_dir = Path("data_cache/features/gate_a_tiny_crop")
-quality_cache_dir = Path("data_cache/quality/gate_a_tiny_crop")
-quality_out_dir = Path("outputs/quality/gate_a_tiny_crop")
+item = get_manifest_item("gate_a_tiny_crop")
+
+feature_set = f"{item.name}_quality_v0"
+
+feature_dir = item.feature_cache_dir
+quality_cache_dir = item.quality_cache_dir
+quality_out_dir = item.quality_output_dir
 
 quality_cache_dir.mkdir(parents=True, exist_ok=True)
 quality_out_dir.mkdir(parents=True, exist_ok=True)
@@ -42,8 +51,8 @@ for name in ["quality_map", "risk_map", "smoothness_score", "stability_score", "
     plt.close()
 
 evidence_source = {
-    "source_crop_cache": "data_cache/crops/Scroll1_z1000_y3520_3584_x4256_4320.npy",
-    "source_metadata": "outputs/cached_tiny_crop_metadata.json",
+    "source_crop_cache": str(item.crop_cache_path),
+    "source_metadata": f"outputs/{item.name}_metadata.json",
     "feature_dir": str(feature_dir),
     "feature_index": "outputs/features/feature_index.csv",
     "inputs": [
@@ -57,6 +66,8 @@ summary = summarize_quality(feature_set, outputs, evidence_source)
 save_quality_summary(summary, quality_out_dir / "quality_summary.json")
 
 print("OK scored surface quality v0")
+print(f"crop_name={item.name}")
 print(summary)
 print(f"saved_quality_cache={quality_cache_dir}")
 print(f"saved_quality_outputs={quality_out_dir}")
+print("No Vesuvius server access used.")
