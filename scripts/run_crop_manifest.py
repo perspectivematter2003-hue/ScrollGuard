@@ -1,31 +1,23 @@
-import json
-from pathlib import Path
+#!/usr/bin/env python3
 import sys
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from scrollguard.data_access import CropRequest, build_metadata, save_metadata
 from scrollguard.cache import load_crop_cache_only
+from scrollguard.crop_manifest import load_crop_manifest
+from scrollguard.data_access import build_metadata, save_metadata
 from scrollguard.metadata_index import load_metadata_files, write_csv, write_jsonl
 
+
 manifest_path = Path("configs/crops_manifest.json")
-items = json.loads(manifest_path.read_text(encoding="utf-8"))
+items = load_crop_manifest(manifest_path)
 
 for item in items:
-    name = item["name"]
-    request = CropRequest(
-        scan_id=item["scan_id"],
-        z=item["z"],
-        y0=item["y0"],
-        y1=item["y1"],
-        x0=item["x0"],
-        x1=item["x1"],
-    )
-
-    crop = load_crop_cache_only(request)
-    metadata = build_metadata(request, crop)
-    out_path = Path("outputs") / f"{name}_metadata.json"
+    crop = load_crop_cache_only(item.request)
+    metadata = build_metadata(item.request, crop)
+    out_path = Path("outputs") / f"{item.name}_metadata.json"
     save_metadata(metadata, out_path)
     print(f"OK wrote {out_path}")
 
