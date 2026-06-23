@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -5,15 +7,22 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from scrollguard.crop_manifest import get_manifest_item
 from scrollguard.texture_features import (
     structure_tensor_texture_features,
     summarize_texture_features,
     save_texture_summary,
 )
 
-CACHE_PATH = Path("data_cache/crops/Scroll1_z1000_y3520_3584_x4256_4320.npy")
-FEATURE_DIR = Path("data_cache/features/gate_a_tiny_crop")
-PREVIEW_DIR = Path("outputs/features/gate_a_tiny_crop")
+
+item = get_manifest_item("gate_a_tiny_crop")
+
+CACHE_PATH = item.crop_cache_path
+FEATURE_DIR = item.feature_cache_dir
+PREVIEW_DIR = item.feature_output_dir
 
 crop = np.load(CACHE_PATH)
 features = structure_tensor_texture_features(crop)
@@ -36,4 +45,6 @@ for name in ["texture_coherence", "texture_orientation"]:
 save_texture_summary(summary, PREVIEW_DIR / "texture_feature_summary.json")
 
 print("OK extracted texture-continuity features")
+print(f"crop_name={item.name}")
 print(summary)
+print("No Vesuvius server access used.")
