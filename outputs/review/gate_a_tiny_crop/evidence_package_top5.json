@@ -20,7 +20,7 @@
     "min_value": 0.0,
     "max_value": 216.0,
     "mean_value": 78.326171875,
-    "created_unix_time": 1781972715.3139114,
+    "created_unix_time": 1781972862.0880148,
     "method": "scrollguard.data_access.read_crop.v0"
   },
   "evidence_count": 5,
@@ -76,7 +76,7 @@
         }
       },
       "source_files": {
-        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "crop_metadata": "outputs/gate_a_tiny_crop_metadata.json",
         "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
         "feature_dir": "data_cache/features/gate_a_tiny_crop",
         "quality_dir": "data_cache/quality/gate_a_tiny_crop",
@@ -135,7 +135,7 @@
         }
       },
       "source_files": {
-        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "crop_metadata": "outputs/gate_a_tiny_crop_metadata.json",
         "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
         "feature_dir": "data_cache/features/gate_a_tiny_crop",
         "quality_dir": "data_cache/quality/gate_a_tiny_crop",
@@ -194,7 +194,7 @@
         }
       },
       "source_files": {
-        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "crop_metadata": "outputs/gate_a_tiny_crop_metadata.json",
         "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
         "feature_dir": "data_cache/features/gate_a_tiny_crop",
         "quality_dir": "data_cache/quality/gate_a_tiny_crop",
@@ -253,7 +253,7 @@
         }
       },
       "source_files": {
-        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "crop_metadata": "outputs/gate_a_tiny_crop_metadata.json",
         "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
         "feature_dir": "data_cache/features/gate_a_tiny_crop",
         "quality_dir": "data_cache/quality/gate_a_tiny_crop",
@@ -312,7 +312,7 @@
         }
       },
       "source_files": {
-        "crop_metadata": "outputs/cached_tiny_crop_metadata.json",
+        "crop_metadata": "outputs/gate_a_tiny_crop_metadata.json",
         "review_priority_csv": "outputs/review/gate_a_tiny_crop/review_priority.csv",
         "feature_dir": "data_cache/features/gate_a_tiny_crop",
         "quality_dir": "data_cache/quality/gate_a_tiny_crop",

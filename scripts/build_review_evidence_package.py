@@ -1,15 +1,24 @@
-from pathlib import Path
+#!/usr/bin/env python3
 import csv
 import json
-import statistics
+import sys
+from pathlib import Path
 
 import numpy as np
 
-review_csv = Path("outputs/review/gate_a_tiny_crop/review_priority.csv")
-metadata_path = Path("outputs/cached_tiny_crop_metadata.json")
-feature_dir = Path("data_cache/features/gate_a_tiny_crop")
-quality_dir = Path("data_cache/quality/gate_a_tiny_crop")
-out_path = Path("outputs/review/gate_a_tiny_crop/evidence_package_top5.json")
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from scrollguard.crop_manifest import get_manifest_item
+
+
+item = get_manifest_item("gate_a_tiny_crop")
+
+review_csv = item.review_output_dir / "review_priority.csv"
+metadata_path = Path("outputs") / f"{item.name}_metadata.json"
+feature_dir = item.feature_cache_dir
+quality_dir = item.quality_cache_dir
+out_path = item.review_output_dir / "evidence_package_top5.json"
 
 metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
 
@@ -70,13 +79,13 @@ for record in records[:5]:
             "review_priority_csv": str(review_csv),
             "feature_dir": str(feature_dir),
             "quality_dir": str(quality_dir),
-            "overlay": "outputs/review/gate_a_tiny_crop/review_priority_overlay.png",
+            "overlay": str(item.review_output_dir / "review_priority_overlay.png"),
         },
         "method": "scrollguard.review_evidence_package.top_risk_tiles.v0",
     })
 
 package = {
-    "package_name": "gate_a_tiny_crop_top5_review_evidence",
+    "package_name": f"{item.name}_top5_review_evidence",
     "doctrine": "AI proposes, verifier decides. Never hallucinate letters. Every output must have evidence trail back to CT data.",
     "crop_metadata": metadata,
     "evidence_count": len(evidence_items),
@@ -87,6 +96,8 @@ out_path.parent.mkdir(parents=True, exist_ok=True)
 out_path.write_text(json.dumps(package, indent=2), encoding="utf-8")
 
 print("OK built review evidence package")
+print(f"crop_name={item.name}")
 print(f"output={out_path}")
 print(f"items={len(evidence_items)}")
 print("top_review_id=", evidence_items[0]["review_id"])
+print("No Vesuvius server access used.")

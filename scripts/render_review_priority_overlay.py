@@ -1,5 +1,7 @@
-from pathlib import Path
+#!/usr/bin/env python3
 import csv
+import sys
+from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")
@@ -7,11 +9,19 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
 
-crop = np.load("data_cache/crops/Scroll1_z1000_y3520_3584_x4256_4320.npy")
-risk_map = np.load("data_cache/quality/gate_a_tiny_crop/risk_map.npy")
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
-csv_path = Path("outputs/review/gate_a_tiny_crop/review_priority.csv")
-out_path = Path("outputs/review/gate_a_tiny_crop/review_priority_overlay.png")
+from scrollguard.crop_manifest import get_manifest_item
+
+
+item = get_manifest_item("gate_a_tiny_crop")
+
+crop = np.load(item.crop_cache_path)
+risk_map = np.load(item.quality_cache_dir / "risk_map.npy")
+
+csv_path = item.review_output_dir / "review_priority.csv"
+out_path = item.review_output_dir / "review_priority_overlay.png"
 
 with csv_path.open("r", encoding="utf-8") as f:
     records = list(csv.DictReader(f))
@@ -52,7 +62,9 @@ plt.savefig(out_path, dpi=200, bbox_inches="tight")
 plt.close()
 
 print("OK rendered review-priority overlay")
+print(f"crop_name={item.name}")
 print(f"output={out_path}")
 print("Top records:")
 for record in top_records:
     print(record)
+print("No Vesuvius server access used.")
