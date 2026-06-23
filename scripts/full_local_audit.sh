@@ -5,6 +5,7 @@ python scripts/start_day_check.py
 python scripts/cache_inventory.py
 python scripts/manifest_cache_check.py
 python scripts/manifest_cache_missing_smoke_test.py
+python scripts/crop_manifest_smoke_test.py
 python scripts/month2_smoke_test.py
 python scripts/month3_smoke_test.py
 python scripts/month4_smoke_test.py
