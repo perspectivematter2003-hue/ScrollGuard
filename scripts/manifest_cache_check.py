@@ -11,7 +11,7 @@ from scrollguard.cache import crop_cache_name
 
 
 def main() -> None:
-    manifest_path = Path("configs/crops_manifest.json")
+    manifest_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("configs/crops_manifest.json")
     items = json.loads(manifest_path.read_text(encoding="utf-8"))
 
     crop_dir = Path("data_cache/crops")
