@@ -1,0 +1,316 @@
+{
+  "method": "vc_segcheck.spacing.estimate_spacing_from_profiles_json.v0",
+  "source_profiles_json": "profiles/lcc_normal_profile_smoke/normal_profiles.json",
+  "min_lag": 2,
+  "max_lag": 15,
+  "num_profiles": 38,
+  "num_valid": 38,
+  "median_spacing_voxels": 6.0,
+  "mean_confidence": 0.7875930206237631,
+  "estimates": [
+    {
+      "profile_id": 1,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7577148646351398,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 2,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8075035759132793,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 3,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8056386806376818,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 4,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8086920653118062,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 5,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8084211169578787,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 6,
+      "spacing_voxels": 6.0,
+      "confidence": 0.753645266222875,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 7,
+      "spacing_voxels": 6.0,
+      "confidence": 0.793033839555214,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 8,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7940293141836754,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 9,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7600722384925754,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 10,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7935522830285177,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 11,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7525432491462405,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 12,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7917527732221408,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 13,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8023709369132864,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 14,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7900730388587548,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 15,
+      "spacing_voxels": 6.0,
+      "confidence": 0.804564029651265,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 16,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8040942167120334,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 17,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8058985160096866,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 18,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8099666903021201,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 19,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8067603260625629,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 20,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7839214576903296,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 21,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8089029821551228,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 22,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7885268154038406,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 23,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7785811675491691,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 24,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7879261147284649,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 25,
+      "spacing_voxels": 6.0,
+      "confidence": 0.6267601664785933,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 26,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7840316223388303,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 27,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8000394667721226,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 28,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8032357869803509,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 29,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7988532479633024,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 30,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7990374622993884,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 31,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8046200553857296,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 32,
+      "spacing_voxels": 6.0,
+      "confidence": 0.8019258748619178,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 33,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7890697741186911,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 34,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7769374648414838,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 35,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7894180413389562,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 36,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7914872535426227,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 37,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7994766017141519,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    },
+    {
+      "profile_id": 38,
+      "spacing_voxels": 6.0,
+      "confidence": 0.7654564057232008,
+      "peak_lag": 6,
+      "valid": true,
+      "reason": "ok"
+    }
+  ]
+}
