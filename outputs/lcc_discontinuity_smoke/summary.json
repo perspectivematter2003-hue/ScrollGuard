@@ -1,0 +1,10 @@
+{
+  "method": "scripts.lcc_discontinuity_smoke_test.v0",
+  "clean_jump_edges": 0,
+  "jump_edges": 64,
+  "expected_jump_edges": 64,
+  "jump_delta_histogram": {
+    "1": 32,
+    "-1": 32
+  }
+}

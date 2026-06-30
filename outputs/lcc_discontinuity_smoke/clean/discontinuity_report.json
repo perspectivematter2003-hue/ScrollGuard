@@ -1,0 +1,10 @@
+{
+  "method": "vc_segcheck.discontinuity.save_discontinuity_report.v0",
+  "shape": [
+    64,
+    64
+  ],
+  "num_jump_edges": 0,
+  "delta_k_histogram": {},
+  "edges": []
+}
