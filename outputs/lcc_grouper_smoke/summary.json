@@ -1,0 +1,26 @@
+{
+  "method": "scripts.lcc_grouper_smoke_test.v0",
+  "shape": [
+    64,
+    64
+  ],
+  "clean_num_edges": 0,
+  "clean_num_regions": 0,
+  "jump_num_edges": 64,
+  "jump_accepted_edges": 64,
+  "jump_num_regions": 1,
+  "jump_region": {
+    "region_id": 0,
+    "edge_count": 64,
+    "bbox_row_min": 23,
+    "bbox_col_min": 23,
+    "bbox_row_max": 40,
+    "bbox_col_max": 40,
+    "mean_score": 1.0
+  },
+  "outputs": {
+    "regions_report": "outputs/lcc_grouper_smoke/regions_report.json",
+    "region_overlay": "outputs/lcc_grouper_smoke/region_overlay.png",
+    "summary": "outputs/lcc_grouper_smoke/summary.json"
+  }
+}
