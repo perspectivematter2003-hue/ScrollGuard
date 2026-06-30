@@ -1,0 +1,10 @@
+{
+  "method": "scripts.lcc_gate_smoke_test.v0",
+  "num_edges": 64,
+  "high_confidence_decisions": {
+    "JUMP": 64
+  },
+  "low_confidence_decisions": {
+    "ABSTAIN": 64
+  }
+}
