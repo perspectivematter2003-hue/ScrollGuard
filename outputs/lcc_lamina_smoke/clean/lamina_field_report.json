@@ -1,0 +1,14 @@
+{
+  "method": "vc_segcheck.lamina.save_lamina_field_report.v0",
+  "shape": [
+    64,
+    64
+  ],
+  "spacing_voxels": 6.0,
+  "reference_coord": 0.0,
+  "index_histogram": {
+    "0": 4096
+  },
+  "mean_confidence": 1.0,
+  "min_confidence": 1.0
+}
