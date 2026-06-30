@@ -1,0 +1,21 @@
+{
+  "uuid": "lcc_synthetic_tifxyz",
+  "scale": [
+    1.0,
+    1.0
+  ],
+  "bbox": [
+    [
+      0.0,
+      0.0,
+      999.8449096679688
+    ],
+    [
+      63.0,
+      63.0,
+      1011.4495849609375
+    ]
+  ],
+  "area": 4096.0,
+  "source": "vc_segcheck synthetic smoke test"
+}
