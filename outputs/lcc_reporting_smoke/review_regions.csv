@@ -1,0 +1,2 @@
+region_id,edge_count,bbox_row_min,bbox_col_min,bbox_row_max,bbox_col_max,bbox_height,bbox_width,mean_score,review_priority,review_reason
+0,64,23,23,40,40,18,18,1.0,64,lamina_continuity_jump_region
