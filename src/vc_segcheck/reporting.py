@@ -4,6 +4,7 @@ from dataclasses import asdict, is_dataclass
 from pathlib import Path
 import csv
 import json
+import os
 from datetime import datetime, timezone
 from typing import Any
 
@@ -68,6 +69,13 @@ def build_lcc_report(
     }
 
 
+def _evidence_created_at_utc() -> str:
+    fixed = os.environ.get("VC_SEGCHECK_FIXED_CREATED_AT_UTC")
+    if fixed:
+        return fixed
+    return datetime.now(timezone.utc).isoformat()
+
+
 def build_evidence_bundle(
     report: dict,
     input_artifacts: dict | None = None,
@@ -76,7 +84,7 @@ def build_evidence_bundle(
     return {
         "method": "vc_segcheck.reporting.build_evidence_bundle.v0",
         "schema_version": 1,
-        "created_at_utc": datetime.now(timezone.utc).isoformat(),
+        "created_at_utc": _evidence_created_at_utc(),
         "claim": "LCC flags connected regions where a segmentation crosses lamina index boundaries.",
         "non_claims": [
             "does_not_claim_ink",

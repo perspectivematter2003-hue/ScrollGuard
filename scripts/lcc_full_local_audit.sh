@@ -2,6 +2,7 @@
 set -euo pipefail
 
 export PYTHONPATH=src
+export VC_SEGCHECK_FIXED_CREATED_AT_UTC="2000-01-01T00:00:00+00:00"
 
 echo "== LCC full local audit =="
 echo "repo: $(pwd)"

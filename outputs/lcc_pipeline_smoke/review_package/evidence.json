@@ -1,7 +1,7 @@
 {
   "method": "vc_segcheck.reporting.build_evidence_bundle.v0",
   "schema_version": 1,
-  "created_at_utc": "2026-07-01T15:36:10.274592+00:00",
+  "created_at_utc": "2000-01-01T00:00:00+00:00",
   "claim": "LCC flags connected regions where a segmentation crosses lamina index boundaries.",
   "non_claims": [
     "does_not_claim_ink",
