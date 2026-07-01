@@ -1,0 +1,30 @@
+{
+  "method": "vc_segcheck.reporting.build_evidence_bundle.v0",
+  "schema_version": 1,
+  "created_at_utc": "2026-07-01T15:53:41.568866+00:00",
+  "claim": "LCC flags connected regions where a segmentation crosses lamina index boundaries.",
+  "non_claims": [
+    "does_not_claim_ink",
+    "does_not_claim_letters",
+    "does_not_claim_text",
+    "does_not_claim_vc3d_export"
+  ],
+  "input_artifacts": {
+    "discontinuity_report_json": "outputs/lcc_cli_smoke/cli_run/discontinuity/discontinuity_report.json",
+    "gate_report_json": "outputs/lcc_cli_smoke/cli_run/gate/gate_report.json",
+    "regions_report_json": "outputs/lcc_cli_smoke/cli_run/regions/regions_report.json",
+    "region_overlay_png": "outputs/lcc_cli_smoke/cli_run/regions/region_overlay.png"
+  },
+  "output_artifacts": {
+    "report_json": "outputs/lcc_cli_smoke/cli_run/review_package/report.json",
+    "review_regions_csv": "outputs/lcc_cli_smoke/cli_run/review_package/review_regions.csv",
+    "evidence_json": "outputs/lcc_cli_smoke/cli_run/review_package/evidence.json"
+  },
+  "report_summary": {
+    "num_regions": 1,
+    "total_region_edges": 64,
+    "max_region_edge_count": 64,
+    "mean_region_score": 1.0
+  },
+  "reviewable_region_count": 1
+}

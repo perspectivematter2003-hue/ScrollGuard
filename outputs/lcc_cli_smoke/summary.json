@@ -1,0 +1,38 @@
+{
+  "method": "scripts.lcc_cli_smoke_test.v0",
+  "command": [
+    "/home/siri/miniconda3/envs/scrollguard/bin/python",
+    "-m",
+    "vc_segcheck.cli",
+    "lcc",
+    "--lamina-index",
+    "outputs/lcc_cli_smoke/inputs/synthetic_lamina_index.npy",
+    "--confidence",
+    "outputs/lcc_cli_smoke/inputs/synthetic_confidence.npy",
+    "--out",
+    "outputs/lcc_cli_smoke/cli_run",
+    "--min-abs-delta-k",
+    "1",
+    "--min-detection-confidence",
+    "0.0",
+    "--min-gate-confidence",
+    "0.5"
+  ],
+  "stdout": "OK vc-segcheck LCC pipeline complete\nnum_jump_edges=64\nnum_accepted_edges=64\nnum_abstained_edges=0\nnum_regions=1\noutput=outputs/lcc_cli_smoke/cli_run\n",
+  "stderr": "",
+  "counts": {
+    "num_jump_edges": 64,
+    "num_accepted_edges": 64,
+    "num_abstained_edges": 0,
+    "num_regions": 1
+  },
+  "required_outputs": [
+    "outputs/lcc_cli_smoke/cli_run/summary.json",
+    "outputs/lcc_cli_smoke/cli_run/discontinuity/discontinuity_report.json",
+    "outputs/lcc_cli_smoke/cli_run/gate/gate_report.json",
+    "outputs/lcc_cli_smoke/cli_run/regions/regions_report.json",
+    "outputs/lcc_cli_smoke/cli_run/review_package/report.json",
+    "outputs/lcc_cli_smoke/cli_run/review_package/review_regions.csv",
+    "outputs/lcc_cli_smoke/cli_run/review_package/evidence.json"
+  ]
+}

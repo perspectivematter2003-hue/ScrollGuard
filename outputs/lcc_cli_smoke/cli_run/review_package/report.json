@@ -1,0 +1,34 @@
+{
+  "method": "vc_segcheck.reporting.build_lcc_report.v0",
+  "schema_version": 1,
+  "shape": [
+    64,
+    64
+  ],
+  "run_metadata": {
+    "entrypoint": "vc-segcheck lcc",
+    "lamina_index": "outputs/lcc_cli_smoke/inputs/synthetic_lamina_index.npy",
+    "confidence": "outputs/lcc_cli_smoke/inputs/synthetic_confidence.npy"
+  },
+  "summary": {
+    "num_regions": 1,
+    "total_region_edges": 64,
+    "max_region_edge_count": 64,
+    "mean_region_score": 1.0
+  },
+  "regions": [
+    {
+      "region_id": 0,
+      "edge_count": 64,
+      "bbox_row_min": 23,
+      "bbox_col_min": 23,
+      "bbox_row_max": 40,
+      "bbox_col_max": 40,
+      "bbox_height": 18,
+      "bbox_width": 18,
+      "mean_score": 1.0,
+      "review_priority": 64,
+      "review_reason": "lamina_continuity_jump_region"
+    }
+  ]
+}

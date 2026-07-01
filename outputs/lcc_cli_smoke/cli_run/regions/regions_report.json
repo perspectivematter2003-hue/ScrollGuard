@@ -1,0 +1,19 @@
+{
+  "method": "vc_segcheck.grouper.save_region_report.v0",
+  "shape": [
+    64,
+    64
+  ],
+  "num_regions": 1,
+  "regions": [
+    {
+      "region_id": 0,
+      "edge_count": 64,
+      "bbox_row_min": 23,
+      "bbox_col_min": 23,
+      "bbox_row_max": 40,
+      "bbox_col_max": 40,
+      "mean_score": 1.0
+    }
+  ]
+}
