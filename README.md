@@ -80,3 +80,7 @@ This is a tiny-crop prototype. It proves the ScrollGuard workflow locally, but i
 
 See `docs/demo_package_v0.md` for the v0 demo ZIP purpose, build commands, and artifact rules.
 
+
+## LCC CLI documentation
+
+See `docs/lcc_usage.md` for the current `vc-segcheck lcc` CLI usage, required `.npy` inputs, expected outputs, smoke test command, and evidence discipline.
