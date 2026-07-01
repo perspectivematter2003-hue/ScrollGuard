@@ -1,0 +1,93 @@
+{
+  "method": "scripts.lcc_real_data_inventory.v0",
+  "summary": {
+    "num_real_ct_crops": 1,
+    "num_real_lcc_ready_pairs": 0,
+    "num_synthetic_lcc_arrays": 6,
+    "num_known_lcc_ready_pairs": 1
+  },
+  "real_ct_crops": [
+    {
+      "path": "data_cache/crops/Scroll1_z1000_y3520_3584_x4256_4320.npy",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "uint8",
+      "min": 0.0,
+      "max": 216.0
+    }
+  ],
+  "real_lcc_ready_pairs": [],
+  "known_lcc_ready_pairs": [
+    {
+      "kind": "synthetic_smoke_pair",
+      "lamina_index": "outputs/lcc_cli_smoke/inputs/synthetic_lamina_index.npy",
+      "confidence": "outputs/lcc_cli_smoke/inputs/synthetic_confidence.npy",
+      "real_data": false
+    }
+  ],
+  "synthetic_lcc_arrays": [
+    {
+      "path": "outputs/lcc_cli_smoke/inputs/synthetic_confidence.npy",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "path": "outputs/lcc_cli_smoke/inputs/synthetic_lamina_index.npy",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "int32",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "path": "outputs/lcc_lamina_smoke/clean/lamina_confidence.npy",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "path": "outputs/lcc_lamina_smoke/clean/lamina_index.npy",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "int32",
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "path": "outputs/lcc_lamina_smoke/jump/lamina_confidence.npy",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "path": "outputs/lcc_lamina_smoke/jump/lamina_index.npy",
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "int32",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "conclusion": "Real CT crop exists, but no real LCC-ready lamina_index/confidence pair was found."
+}
