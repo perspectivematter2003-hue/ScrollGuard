@@ -83,4 +83,4 @@ See `docs/demo_package_v0.md` for the v0 demo ZIP purpose, build commands, and a
 
 ## LCC CLI documentation
 
-See `docs/lcc_usage.md` for the current `vc-segcheck lcc` CLI usage, required `.npy` inputs, expected outputs, smoke test command, and evidence discipline.
+See `docs/lcc_usage.md` for the current `vc-segcheck lcc` CLI usage, required `.npy` inputs, expected outputs, smoke test command, full local audit command, and evidence discipline.

@@ -103,3 +103,17 @@ num_regions=1
 LCC is a review-region flagging tool.
 
 It does not hallucinate letters, claim readability, or infer ink. Every output should remain tied to explicit input arrays and generated evidence files.
+
+## Full local audit
+
+Run all current LCC smoke tests in order:
+
+```bash
+./scripts/lcc_full_local_audit.sh
+```
+
+A successful audit ends with:
+
+```text
+OK LCC full local audit passed
+```
